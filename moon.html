@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramadan Greeting</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #1f2937;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .moon {
+        position: absolute;
+        top: 40%;
+        left: 47.5%;
+        width: 100px;
+        height: 100px;
+        background: #f0e68c;
+        border-radius: 50%;
+        opacity: 0;
+        animation: moon-rise 10s 3s linear infinite;
+      }
+
+      @keyframes moon-rise {
+        0% {
+          transform: rotateZ(170deg) translateX(250px);
+        }
+        50% {
+          transform: rotateZ(270deg) translateX(250px);
+        }
+        100% {
+          transform: rotateZ(380deg) translateX(250px);
+        }
+      }
+
+      .greeting {
+        text-align: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="moon" id="moon"></div>
+    <div class="greeting">
+      <h1>Ramadan Mubarak!</h1>
+      <p>Wishing you a blessed Ramadan</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
